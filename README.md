@@ -1,9 +1,9 @@
 ### 启动说明
-首先需要下载node http://nodejs.cn/ 下载最新版即可
-安装node之后 到项目根目录运行 npm install 安装本项目依赖
-安装完成后，运行相应指令
-npm run start 启动编译器
-npm run test 运行单元测试
+1. 首先需要下载node http://nodejs.cn/ 下载最新版即可
+2. 安装node之后 到项目根目录运行 npm install 安装本项目依赖
+3. 安装完成后，运行相应指令
+    npm run start 启动编译器
+    npm run test 运行单元测试
 
 ### 架构说明
 1. core 核心代码 包含grammer（语法分析） 和 lexical（词法分析）

@@ -1,4 +1,4 @@
-const lexicalAnaylse = require('../core/lexical');
+const anaylse = require('../core/lexical');
 
 describe('一段代码测试', () => {
     it('for循环测试', () => {
@@ -8,7 +8,7 @@ describe('一段代码测试', () => {
             result += i;
         }`
 
-        let result = lexicalAnaylse(code);
+        let result = anaylse(code);
         console.log(result);
     })
 
@@ -30,7 +30,7 @@ describe('一段代码测试', () => {
             }
         }
         `
-        let result = lexicalAnaylse(code);
+        let result = anaylse(code);
         console.log(result);
     })
 })
