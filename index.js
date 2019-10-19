@@ -6,7 +6,7 @@ const rl = readline.createInterface({
 })
 
 
-console.log('让我康康你写了啥');
+console.log('输入你要解析的c语言（目前只执行词法分析）');
 rl.on('line', (answer) => {
     let tokens = lexicalAnaylse(answer + ' ');
     console.log(tokens);
