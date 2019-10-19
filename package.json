@@ -1,0 +1,27 @@
+{
+  "name": "complier",
+  "version": "1.0.0",
+  "description": "1. core 核心代码 包含grammer（语法分析） 和 lexical（词法分析）\r 2. doc 文档\r 3. errorNote 错误日志系统，记录编译过程中的报错日志\r 4. helper 辅助函数\r 5. instance 实例\r 6. types token, 字符等的类型文件\r 7. test 单元测试",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuaGod/cComplier.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuaGod/cComplier/issues"
+  },
+  "homepage": "https://github.com/GuaGod/cComplier#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
