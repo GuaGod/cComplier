@@ -159,9 +159,7 @@ const createStart = (tokens) => {
             return SEMICOLON(char);
         }
 
-        if (char === ' ') {
-            return start;
-        }
+        return start;
     }
 
     function REVERSE(char) {
@@ -2951,6 +2949,13 @@ const createStart = (tokens) => {
 
     function IDENTIFIY(char) {
         let charType = judgeChar(char);
+        if (char === '[') {
+            let token = tokens.createToken(tokenTypes.IDENTIFIY, tk.join(''));
+            tokens.push(token);
+            tk = [];
+            return LEFT_MIDDLE_BRACKET(char);
+        }
+        
         if (char === '_' || charType === charTypes.CHAR) {
             tk.push(char);
             return IDENTIFIY;
@@ -2960,6 +2965,7 @@ const createStart = (tokens) => {
             tk.push(char);
             return IDENTIFIY;
         }
+
 
         let token = tokens.createToken(tokenTypes.IDENTIFIY, tk.join(''));
         tokens.push(token);

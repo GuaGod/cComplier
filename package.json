@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "尚未书写单元测试",
+    "test": "jest ./test/",
     "start": "node index.js"
   },
   "repository": {
