@@ -159,6 +159,10 @@ const createStart = (tokens) => {
             return SEMICOLON(char);
         }
 
+        if (char === ',') {
+            return COMMA(char);
+        }
+
         return start;
     }
 
@@ -2910,6 +2914,14 @@ const createStart = (tokens) => {
         return start(char);
     }    
     
+    function COMMA(char) {
+        if(char === ',') {
+            let token = tokens.createToken(tokenTypes.COMMA, ',');
+            tokens.push(token);
+    
+            return start;
+        }
+    }
 
     function NUMBER(char) {
         let charType = judgeChar(char);
@@ -2955,7 +2967,7 @@ const createStart = (tokens) => {
             tk = [];
             return LEFT_MIDDLE_BRACKET(char);
         }
-        
+
         if (char === '_' || charType === charTypes.CHAR) {
             tk.push(char);
             return IDENTIFIY;
